@@ -1,4 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ryanch741.logger">
-
+    <service
+        android:name="com.ryanch741.logger.LogService"
+        android:enabled="true"
+        android:exported="true"
+        android:label="LogService"
+        android:process=":LogService">
+        <intent-filter android:priority="2147483647">
+            <action android:name="com.ryanch741.logger.ILogService" />
+        </intent-filter>
+    </service>
 </manifest>
